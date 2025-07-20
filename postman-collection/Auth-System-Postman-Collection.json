@@ -42,8 +42,14 @@
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/register",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "register"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
 						}
 					}
 				},
@@ -80,8 +86,14 @@
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/login",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "login"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
 						}
 					}
 				},
@@ -116,8 +128,14 @@
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/refresh-token",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "refresh-token"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh-token"
+							]
 						}
 					}
 				},
@@ -133,8 +151,45 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/me",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "me"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					}
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"{{userName}}\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
 						}
 					}
 				},
@@ -154,8 +209,14 @@
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/logout",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "logout"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
 						}
 					}
 				},
@@ -171,8 +232,14 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/logout-all",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "logout-all"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout-all"
+							]
 						}
 					}
 				}
@@ -197,8 +264,14 @@
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/forgot-password",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "forgot-password"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
 						}
 					}
 				},
@@ -218,8 +291,45 @@
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/reset-password",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "reset-password"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"reset-password"
+							]
+						}
+					}
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"currentPassword\": \"{{userPassword}}\",\n  \"newPassword\": \"{{newPassword}}\",\n  \"confirmPassword\": \"{{newPassword}}\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/change-password",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"change-password"
+							]
 						}
 					}
 				},
@@ -235,8 +345,14 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/send-verification",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "send-verification"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"send-verification"
+							]
 						}
 					}
 				},
@@ -256,8 +372,14 @@
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/auth/verify-email",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "auth", "verify-email"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"verify-email"
+							]
 						}
 					}
 				}
@@ -278,8 +400,13 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/users?page=1&limit=10",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "users"],
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
 							"query": [
 								{
 									"key": "page",
@@ -305,8 +432,14 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/users/{{targetUserId}}",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "users", "{{targetUserId}}"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{{targetUserId}}"
+							]
 						}
 					}
 				},
@@ -330,8 +463,15 @@
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/users/{{targetUserId}}/role",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "users", "{{targetUserId}}", "role"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{{targetUserId}}",
+								"role"
+							]
 						}
 					}
 				},
@@ -347,8 +487,15 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/users/{{targetUserId}}/status",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "users", "{{targetUserId}}", "status"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{{targetUserId}}",
+								"status"
+							]
 						}
 					}
 				},
@@ -364,8 +511,14 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/users/{{targetUserId}}",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "users", "{{targetUserId}}"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{{targetUserId}}"
+							]
 						}
 					}
 				}
@@ -386,8 +539,14 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/audit/my-activity?page=1&limit=20",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "audit", "my-activity"],
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"audit",
+								"my-activity"
+							],
 							"query": [
 								{
 									"key": "page",
@@ -428,8 +587,14 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/audit/system?page=1&limit=50",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "audit", "system"],
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"audit",
+								"system"
+							],
 							"query": [
 								{
 									"key": "page",
@@ -475,8 +640,13 @@
 						],
 						"url": {
 							"raw": "{{baseUrl}}/api/audit?page=1&limit=50",
-							"host": ["{{baseUrl}}"],
-							"path": ["api", "audit"],
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"audit"
+							],
 							"query": [
 								{
 									"key": "page",
@@ -501,8 +671,12 @@
 						"method": "GET",
 						"url": {
 							"raw": "{{baseUrl}}/health",
-							"host": ["{{baseUrl}}"],
-							"path": ["health"]
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"health"
+							]
 						}
 					}
 				}

@@ -96,6 +96,8 @@ Server will start at `http://localhost:3000`
 | POST | `/api/auth/logout` | Logout user | ❌ |
 | POST | `/api/auth/logout-all` | Logout from all devices | ✅ |
 | GET | `/api/auth/me` | Get user profile | ✅ |
+| PATCH | `/api/auth/me` | Update user profile | ✅ |
+| POST | `/api/auth/change-password` | Change user password | ✅ |
 
 ### 📧 Password & Email Endpoints
 
